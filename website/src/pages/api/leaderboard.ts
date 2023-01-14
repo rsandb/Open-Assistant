@@ -7,11 +7,10 @@ import { oasstApiClient } from "src/lib/oasst_api_client";
 const handler = withoutRole("banned", async (req, res) => {
   const { leaderboard } = await oasstApiClient.fetch_leaderboard();
   res.status(200).json(
-    leaderboard.map(({ display_name, ranking, score, streak }) => ({
+    leaderboard.map(({ display_name, ranking, score }) => ({
       display_name,
       ranking,
       score,
-      streak,
     }))
   );
 });

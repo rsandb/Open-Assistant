@@ -26,10 +26,10 @@ export function LeaderboardTable() {
       title: "Score",
       GridItemProps: { ...GridProps, justifyContent: "center" },
     },
-    {
-      title: "Medal",
-      GridItemProps: { ...GridProps, justifyContent: "center" },
-    },
+    // {
+    //   title: "Medal",
+    //   GridItemProps: { ...GridProps, justifyContent: "center" },
+    // },
   ];
 
   return (
@@ -59,7 +59,7 @@ export function LeaderboardTable() {
             <GridItem colSpan={6}>
               <Divider />
             </GridItem>
-            {leaderboardEntries.map(({ display_name, ranking, score, streak }, idx) => (
+            {leaderboardEntries.map(({ display_name, ranking, score }, idx) => (
               <RankItem
                 key={idx}
                 username={display_name}
@@ -67,7 +67,7 @@ export function LeaderboardTable() {
                 rankUp={true}
                 rankDown={false}
                 score={score}
-                streak={streak}
+                streak={true}
                 streakLength={10}
                 medal="test"
               />

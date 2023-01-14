@@ -1,14 +1,13 @@
-import { Avatar, Badge, Box, GridItem, Text, useColorModeValue } from "@chakra-ui/react";
-import { FiChevronDown, FiChevronUp } from "react-icons/fi";
+import { Avatar, Box, GridItem, Text, useColorModeValue } from "@chakra-ui/react";
 
 type RankItemProps = {
-  medal: string;
+  // medal: string;
   rank: number;
-  rankUp: boolean;
-  rankDown: boolean;
+  // rankUp: boolean;
+  // rankDown: boolean;
   score: number;
-  streak: boolean;
-  streakLength: number;
+  // streak: boolean;
+  // streakLength: number;
   username: string;
 };
 
@@ -31,7 +30,7 @@ const RankItem = (props: RankItemProps) => {
             <Text>{props.username}</Text>
 
             {/* instead of checking if hasStreak is true, just use if streak > 3 = badge */}
-
+            {/* 
             {props.streak ? (
               <Badge display={["none", "none", "block"]} colorScheme="purple">
                 {props.streakLength}-Day Streak
@@ -41,15 +40,15 @@ const RankItem = (props: RankItemProps) => {
               <Badge display={["block", "block", "none"]} colorScheme="purple">
                 {props.streakLength}
               </Badge>
-            ) : null}
+            ) : null} */}
           </Box>
         </GridItem>
         <GridItem display="flex" justifyContent="center">
           <GridItem width="14" position="relative" display="flex" justifyContent="center" alignItems="center">
-            <Box position="absolute" left="0">
+            {/* <Box position="absolute" left="0">
               {props.rankUp ? <FiChevronUp color="green" /> : null}
               {props.rankDown ? <FiChevronDown color="red" /> : null}
-            </Box>
+            </Box> */}
             <Text>{props.rank}</Text>
           </GridItem>
         </GridItem>
@@ -57,7 +56,7 @@ const RankItem = (props: RankItemProps) => {
           <Text>{props.score}</Text>
         </GridItem>
         <GridItem display="flex" justifyContent="center">
-          <Text fontSize="xl">{props.medal}</Text>
+          {/* <Text fontSize="xl">{props.medal}</Text> */}
         </GridItem>
       </GridItem>
     </>
