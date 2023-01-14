@@ -29,6 +29,9 @@ const RankItem = (props: RankItemProps) => {
           <Box display="flex" alignItems="center" gap="2">
             <Avatar size="xs" />
             <Text>{props.username}</Text>
+
+            {/* instead of checking if hasStreak is true, just use if streak > 3 = badge */}
+
             {props.streak ? (
               <Badge display={["none", "none", "block"]} colorScheme="purple">
                 {props.streakLength}-Day Streak
